@@ -1,0 +1,98 @@
+body{
+  padding: 0;
+  margin: 0;
+  background: #202225;
+  color: white;
+}
+.zone {
+  border: 1px solid white;
+  padding: 2vw;
+  box-sizing: border-box;
+  position: relative;
+}
+.name {
+  font-weight: bold;
+}
+.inside-wrapper {
+  display: flex;
+}
+.door {
+  position: absolute;
+  z-index: 2;
+  background-color: #81ecff; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#airstrip {
+  width: 33vw;
+  background: #34373c;
+  min-height: 500px;
+}
+#airstrip > .door {
+  right: -40px;
+}
+#warehouse > .door {
+  left: -40px;
+}
+
+#door-0 {
+  top: -15px;
+  left: 40vw;
+}
+#door-1 {
+  top: -15px;
+  left: 60vw;
+}
+#door-2 {
+  top: -15px;
+  left: 15px;
+}
+#door-3 {
+  top: -15px;
+  left: 125px;
+}
+#door-4 {
+  top: 180px;
+}
+#door-5 {
+  top: 220px;
+}
+#door-6 {
+  top: 180px;
+}
+#door-7 {
+  top: 220px;
+}
+
+#cap {
+  font-size: 12px;
+  font-style: italic;
+}
+
+#sort,
+#warehouse {
+  background: #4e4c4e;
+  width: 33vw;
+  min-height: 300px;
+}
+
+#loader {
+  background: #525e66;
+  text-align: right;
+  min-height: 200px;
+  width: 66vw;
+}
+#outside {
+  background: #252e28;
+  min-height: 300px;
+  width: 99vw;
+}
+fieldset, form{
+  border: 0px;
+}

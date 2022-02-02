@@ -1,0 +1,66 @@
+<body>
+<div class="wrapper">
+  <div class="inside-wrapper">
+    <div id="airstrip" class="zone">
+      <div>
+        <span class="name">Airstrip</span>
+        <div id="cap">max capacity 3</div>
+        <app-worker-list [zone]="airStripZone"></app-worker-list>
+      </div>
+
+      <button id="door-4" class="door" (click)="onDoorClick(4, airStripZone)">
+        Drzwi 4 >
+      </button>
+      <button id="door-5" class="door" (click)="onDoorClick(5, sortZone)">
+        Drzwi 5 <
+      </button>
+    </div>
+    <div>
+      <div>
+        <div class="inside-wrapper">
+          <div id="sort" class="zone">
+            <span class="name">Sort Zone</span>
+            <div id="cap">max capacity 7</div>
+            <app-worker-list [zone]="sortZone"></app-worker-list>
+          </div>
+          <div id="warehouse" class="zone">
+            <span class="name">Warehouse</span>
+            <div id="cap">max capacity 3</div>
+            <app-worker-list [zone]="warehouseZone"></app-worker-list>
+            <button id="door-6" class="door" (click)="onDoorClick(6, sortZone)">
+              Drzwi 6 >
+            </button>
+            <button id="door-7" class="door"(click)="onDoorClick(7, warehouseZone)">
+              Drzwi 7 <
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="loader" class="zone">
+        <span class="name">Loading Zone</span>
+        <div id="cap">max capacity 5</div>
+        <app-worker-list [zone]="loadingZone"></app-worker-list>
+        <button id="door-2" class="door" (click)="onDoorClick(2, sortZone)">
+          Drzwi 2 v
+        </button>
+        <button id="door-3" class="door" (click)="onDoorClick(3, loadingZone)">
+          Drzwi 3 ^
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="outside" class="zone">
+    <span class="name">Outside Zone</span>
+    <div id="cap">max capacity unlimited</div>
+
+    <app-worker-list [zone]="outsideZone"></app-worker-list>
+
+    <button id="door-0" class="door" (click)="onDoorClick(0, outsideZone)">
+      Drzwi 0 ^
+    </button>
+    <button id="door-1" class="door" (click)="onDoorClick(1, loadingZone)">
+      Drzwi 1 v
+    </button>
+  </div>
+</div>
+</body>

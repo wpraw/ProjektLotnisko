@@ -1,0 +1,10 @@
+<form *ngIf="zone.currentWorkers.length > 0">
+  <fieldset [id]="zone['zone']">
+    <div *ngFor="let worker of zone.currentWorkers">
+      <input type="radio" [name]="zone['zone']" [value]="worker.workerId" />
+      <label [for]="worker.name + ' ' + worker.surname">{{
+        worker.workerId + " " + worker.name + " " + worker.surname
+      }}</label>
+    </div>
+  </fieldset>
+</form>
